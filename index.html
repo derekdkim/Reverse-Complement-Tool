@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<script src='complement.js'></script>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
+        <title>DNA/RNA Reverse Complement Tool</title>
+    </head>
+
+    <body>
+        <h1 id="title">Reverse Complement Tool</h1>
+
+        <p>Enter a string of DNA or RNA sequence to generate its reverse complement. Spaces and line numbers will automatically be pruned out.</p>
+        
+        </br>
+        
+        <div id='input-div'>
+            <form>
+                <textarea rows='10' cols='80' id="input-field"></textarea>
+                <br/>
+                <button id="rev-comp-button" onclick="main()">Generate Reverse Complement</button>
+            </form>
+        </div>
+        <hr>
+        <div id='output-div'>
+            <h4>Reverse Complement</h6>
+            <textarea rows='10' cols='80' id="output-field"></textarea>
+        </div>
+
+    </body>
+</html>
