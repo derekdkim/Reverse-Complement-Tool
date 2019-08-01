@@ -61,9 +61,9 @@ const main = () => {
     console.log("Main method initiated.");
 
     if (seq.length === 0 || null) {
-        alert("Failed to get sequence.");
+        console.log("Failed to get sequence.");
     } else {
-        alert(seq);
+        console.log(seq);
     }
     
 
@@ -76,6 +76,6 @@ const main = () => {
     // Complement seq
     let compSeq = complementSeq(revSeq);
 
-    document.getElementById('output-field').innerHTML = compSeq;
+    document.getElementById('output-field').value = compSeq;
 
 }
