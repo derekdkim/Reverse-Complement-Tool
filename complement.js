@@ -58,12 +58,10 @@ const reverseSeq = (seq) => {
 const main = () => {
     // Obtain sequence
     let seq = document.getElementById('input-field').value;
-    console.log("Main method initiated.");
 
     if (seq.length === 0 || null) {
-        console.log("Failed to get sequence.");
-    } else {
-        console.log(seq);
+        document.getElementById('output-field').value = "Please enter a DNA or RNA sequence.";
+        return 0;
     }
     
 
