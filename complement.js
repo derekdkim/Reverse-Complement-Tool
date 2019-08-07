@@ -1,7 +1,7 @@
-// Pairing Rules
-let nucCode = ['A', 'T', 'G', 'C', 'U'];
-let DNAPair = { 'A':'T', 'T':'A', 'G':'C', 'C':'G'};
-let RNAPair = { 'A':'U', 'U':'A', 'G':'C', 'C':'G'};
+// Pairing Rules -- Added N as it is often present in sequencing reads and removing a letter altogether may cause unwanted frameshift.
+let nucCode = ['A', 'T', 'G', 'C', 'U', 'N'];
+let DNAPair = { 'A':'T', 'T':'A', 'G':'C', 'C':'G', 'N':'N'};
+let RNAPair = { 'A':'U', 'U':'A', 'G':'C', 'C':'G', 'N':'N'};
 
 // Trim sequence into a consistent format
 const cleanSeq = (seq) => {
@@ -74,6 +74,19 @@ const main = () => {
     // Complement seq
     let compSeq = complementSeq(revSeq);
 
+    // Display output
     document.getElementById('output-field').value = compSeq;
 
+}
+
+// Clean-only method
+const cleanIt = () => {
+    // Obtain sequence
+    let seq = document.getElementById('input-field').value;
+
+    // Clean seq
+    let cleanedSeq = cleanSeq(seq);
+
+    // Display output
+    document.getElementById('output-field').value = cleanedSeq;
 }
